@@ -1,17 +1,16 @@
-package main
+package horstwilio
 
 import "net/http"
-import "log"
+
 import "fmt"
 
-func main() {
+func init() {
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
 
 const content = `<?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say>Hello Monkey</Say>
+    <Say>Hello Gopher</Say>
 </Response>`
 
 func handler(w http.ResponseWriter, r *http.Request) {
