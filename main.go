@@ -1,8 +1,9 @@
 package horstwilio
 
-import "net/http"
-
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func init() {
 	http.HandleFunc("/", handler)
